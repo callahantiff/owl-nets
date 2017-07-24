@@ -1,0 +1,48 @@
+# Compiled source #
+###################
+*.pyc
+*.exe
+
+# Specific directories #
+########################
+**/Distribution_Testing_Results/
+**/Draft_Scripts/
+**/Network_Data/
+**/Network_Inference_Results/
+**/OWL_Reasoners/
+**/Query_Data/
+**/Results/
+**/SPARQL_Queries/
+
+# Scripts #
+###########
+*DisGeNetQuery.py
+*EvaluationMetrics.py
+*LinkPrediction.py
+*LinkPredictionResults.py
+*NETSRDFRepresentationResults.py
+*NETSRDFRepresentation.py
+*NetworkInference.py
+*NetworkInferencePlots.py
+*NetworkStatistics.py
+*authenticate
+
+# Packages #
+############
+*.dmg
+*.gz
+*.tar
+*.zip
+
+# Logs #
+########
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+*.idea/
