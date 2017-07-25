@@ -35,9 +35,8 @@ Examples are described in the table below.
 
 
 ### Visualizing Query 3
-| OWL Representation | OWL-NETS Representation                                                      
-|:------------------:|:-----------------------:|  
-| <img src="/owl-nets/images/OWL_Angiogenesis_network.png" alt="OWL Representation" width="300"/> | <img src="/owl-nets/images/NETS_Angiogenesis_network.png" alt="OWL_NETS Representation" width="300"/>
+
+<img src="/owl-nets/images/angiogenesis_owl+nets.png" alt="OWL + OWL-NETS Representation" width="800"/>
 <!--![OWL Representation of Query 3](/images/OWL_Angiogenesis_network.png) ![OWL-NETS Representation of Query 3](/images/NETS_Angiogenesis_network.png)>
 
 
