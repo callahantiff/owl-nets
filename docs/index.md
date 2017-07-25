@@ -14,7 +14,7 @@ The OWL-NETS method is described using an example query that investigates diseas
 
 <!--<img src="https://github.com/callahantiff/owl-nets/blob/master/docs/images/Figure1.png" width="1200"> -->
 <!--![ScreenShot](/images/Figure1.png)-->
-<img src="/owl-nets/images/Figure1.png" alt="ScreenShot" width="1200"/>
+<img src="/owl-nets/images/Figure1.png" alt="Figure 1" width="1500"/>
 
 **1. Construct Query Graph and Identify NETS Nodes:** the input SPARQL query is used to create a directed query graph, where each triple (shown in a pink box) represents a directed edge in the query graph. The graph is searched for edges containing denotes relations (*Assumption 1*), shown in the figure as a dashed orange arrow). NETS nodes (Angiogenesis, Participating Proteins, and Diseases) are the object of these relations. This information is stored as a lists.  
 
@@ -36,8 +36,9 @@ Examples are described in the table below.
 | 3     | Human Protein-protein interactions that participate in angiogenesis | Gene Ontology; Uniprot       
 
 ### Visualizing Query 3
-
-![OWL Representation of Query 3](/images/OWL_Angiogenesis_network.png) ![OWL-NETS Representation of Query 3](/images/NETS_Angiogenesis_network.png)
+<img src="/owl-nets/images/OWL_Angiogenesis_network.png" alt="OWL Representation of Query 3" width="500"/>
+<img src="/owl-nets/images/NETS_Angiogenesis_network.png" alt="OWL_NETS Representation of Query 3" width="500"/>
+<!--![OWL Representation of Query 3](/images/OWL_Angiogenesis_network.png) ![OWL-NETS Representation of Query 3](/images/NETS_Angiogenesis_network.png)>
 
 
 
