@@ -36,7 +36,7 @@ Examples are described in the table below.
 
 ### Visualizing Query 3
 
-![alt-text-1](/images/OWL_Angiogenesis_network.png "OWL Representation of Query 3") ![alt-text-2](/images/NETS_Angiogenesis_network.png "OWL-NETS Representation of Query 3")
+![OWL Representation of Query 3](/images/OWL_Angiogenesis_network.png) ![OWL-NETS Representation of Query 3](/images/NETS_Angiogenesis_network.png)
 
 
 
