@@ -34,7 +34,7 @@ Examples are described in the table below.
 |   1   | Human Protein-protein interactions that participate in angiogenesis | Gene Ontology; Uniprot       
 
 
-### Visualizing Query 3
+### Visualizing Query 1
 
 <img src="/owl-nets/images/angiogenesis_owl+nets.png" alt="OWL + OWL-NETS Representation" width="800"/>
 <!--![OWL Representation of Query 3](/images/OWL_Angiogenesis_network.png) ![OWL-NETS Representation of Query 3](/images/NETS_Angiogenesis_network.png)>
