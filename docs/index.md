@@ -12,8 +12,9 @@ OWL-NETS is implemented in Python (v2.7) and can be run via a simple user-friend
 ### Overview
 The OWL-NETS method is described using an example query that investigates disease-associated proteins that participate in angiogenesis (see Figure). The method takes a SPARQL query as input and outputs a directed OWL-NETS, directed OWL representation, or both network representations. To improve processing efficiency, the majority of the computational workload is performed on the input SPARQL query (steps 1-4 in Figure 1) rather than the resulting output.
 
-<img src="https://github.com/callahantiff/owl-nets/blob/master/docs/images/Figure1.png" width="1200">
-![ScreenShot](/images/Figure1.png)
+<!--<img src="https://github.com/callahantiff/owl-nets/blob/master/docs/images/Figure1.png" width="1200"> -->
+<!--![ScreenShot](/images/Figure1.png)-->
+<img src="/owl-nets/images/Figure1.png" alt="ScreenShot" width="1200"/>
 
 **1. Construct Query Graph and Identify NETS Nodes:** the input SPARQL query is used to create a directed query graph, where each triple (shown in a pink box) represents a directed edge in the query graph. The graph is searched for edges containing denotes relations (*Assumption 1*), shown in the figure as a dashed orange arrow). NETS nodes (Angiogenesis, Participating Proteins, and Diseases) are the object of these relations. This information is stored as a lists.  
 
