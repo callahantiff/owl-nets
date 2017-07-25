@@ -130,7 +130,7 @@ def OWLNetworkBuilder(input1):
         with open(str(input1.rpartition(".")[-1] + "_results.json") + '_results.json', 'w') as outfile:
             json.dump(results, outfile)
 
-    # with open('SPARQL_Queries/Angiogenesis_query_results.json') as json_data:
+    # with open('Query_Data/DDI_reactome_query_results.json') as json_data:
     #     results = json.load(json_data)
 
     ## NETWORK POPULATION

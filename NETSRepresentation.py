@@ -78,7 +78,7 @@ def NETSNodeFinder(graph):
                 else:
                     node_info.append(in_nodes[0][1])
 
-        # For endpoints using only RDF
+        # For endpoints using only RDF - ways to extend/modify the original code
         if graph[i][j]['predicate'] == 'rdfs:label':
             node_info.append(i)
 
@@ -566,8 +566,8 @@ def NETSNetworkBuilder(input1):
     # update query text
     updated_query_text = QueryParser.NETSQueryParser(query_text, NETS_nodes, NETS_edge_metadata)
 
-    # for x in updated_query_text[0].split('\n'):
-    #     print x
+    for x in updated_query_text[0].split('\n'):
+        print x
 
     ## QUERY ENDPOINT
     # authentication file (format: url, user, password) - should be placed in same user directory as query
