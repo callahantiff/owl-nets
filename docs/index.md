@@ -6,9 +6,4 @@ The Web Ontology Language (OWL) is a Semantic Web standard, which, in conjunctio
 <!-- <img src="https://github.com/callahantiff/owl-nets/blob/master/docs/images/Figure1.png" width="400"> -->
 ![ScreenShot](/images/Figure1.png)
 
-
-## Supplementary Material
-
-Will add supplementary material here.
-
 ```
