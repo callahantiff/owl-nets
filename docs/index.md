@@ -28,16 +28,16 @@ The OWL-NETS method is described using an example query that investigates diseas
   
 ## Biomedical Use Cases
 Examples are described in the table below.
-
+ 
 | Query | Description                                         | Data Source                  
-| ----- |:------------------------------------------------:   |:----------------------------:|
-| 1     | Protein targets of drugs that interact with Trametinib | Uniprot; Protein Ontology; RefSeq; IRefWeb; DrugBank    
-| 2     | Protein targets of 100,000 drug-drug interactions and the pathways the proteins participate in and the pathways the proteins participate in | Uniprot; DrugBank; Reactome
-| 3     | Human Protein-protein interactions that participate in angiogenesis | Gene Ontology; Uniprot       
+|:-----:|:------------------------------------------------:   |:----------------------------:|
+|   1   | Human Protein-protein interactions that participate in angiogenesis | Gene Ontology; Uniprot       
+
 
 ### Visualizing Query 3
-<img src="/owl-nets/images/OWL_Angiogenesis_network.png" alt="OWL Representation of Query 3" width="500"/>
-<img src="/owl-nets/images/NETS_Angiogenesis_network.png" alt="OWL_NETS Representation of Query 3" width="500"/>
+| OWL Representation | OWL-NETS Representation                                                      
+|:------------------:|:-----------------------:|  
+| <img src="/owl-nets/images/OWL_Angiogenesis_network.png" alt="OWL Representation" width="500"/> | <img src="/owl-nets/images/NETS_Angiogenesis_network.png" alt="OWL_NETS Representation" width="500"/>
 <!--![OWL Representation of Query 3](/images/OWL_Angiogenesis_network.png) ![OWL-NETS Representation of Query 3](/images/NETS_Angiogenesis_network.png)>
 
 
