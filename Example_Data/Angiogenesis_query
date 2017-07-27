@@ -1,0 +1,74 @@
+PREFIX franzOption_clauseReorderer: <franz:identity>
+PREFIX franzOption_chunkProcessingAllowed: <franz:yes>
+PREFIX franzOption_memoryLimit: <franz:60g>
+PREFIX franzOption_memoryExhaustionWarningPercentage: <franz:90.0>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboMeta: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX kiao: <http://kabob.ucdenver.edu/iao/>
+PREFIX ccp_obo_ext: <http://ccp.ucdenver.edu/obo/ext/>
+
+# VEGF - angiogenesis GOBP/subclasses, the proteins that participate in those GOBPs, and their protein-protein interactions (n=39 triples)
+
+SELECT DISTINCT *
+
+WHERE {
+
+ ## ANGIOGENESIS + CHILDREN
+ ?angiogenesis rdfs:subClassOf* obo:GO_0001525 . # GO_BP:angiogenesis
+ ?angiogenesis oboMeta:hasOBONamespace ?OBONamespace .
+ ?angioSubsICE obo:IAO_0000219 ?angiogenesis . # IAO:denotes
+
+ # restriction - GOBPS have protein participants
+ ?anonSubclass rdfs:subClassOf ?angiogenesis .
+ ?anonSubclass rdfs:subClassOf ?protRest .
+ ?protRest owl:onProperty obo:RO_0000057 . # RO:has_participant
+ ?protRest rdf:type owl:Restriction .
+ ?protRest owl:someValuesFrom ?protSub .
+ ?protSub rdfs:subClassOf ?participating_protein.
+
+ ## PARTICIPATING PROTEINS
+ ?participating_protein rdfs:subClassOf obo:CHEBI_36080 . # CHEBI:protein
+
+ # restriction - participating proteins are human
+ ?participating_protein rdfs:subClassOf ?taxonRest .
+ ?taxonRest owl:someValuesFrom obo:NCBITaxon_9606 . # NCBI_TAXON:human
+ ?taxonRest owl:onProperty obo:RO_0002162 . # RO:in_taxon
+ ?taxonRest rdf:type owl:Restriction .
+ ?partProtICE obo:IAO_0000219 ?participating_protein . # IAO:denotes
+
+ # restriction - participating proteins participate in an interaction
+ ?protSub2 rdfs:subClassOf ?participating_protein .
+ ?hasPartR owl:someValuesFrom ?protSub2 .
+ ?hasPartR owl:onProperty obo:RO_0000057 . # RO:has_participant
+ ?hasPartR rdf:type owl:Restriction .
+ ?interaction rdfs:subClassOf ?hasPartR .
+ ?interaction rdfs:subClassOf ?rcard .
+ ?rcard owl:cardinality 2 . # binary interaction
+ ?rcard owl:onProperty obo:RO_0000057 . # RO:has_participant
+ ?rcard rdf:type owl:Restriction .
+
+
+ # restriction - the interaction has another protein participant
+ ?interaction rdfs:subClassOf ?hasPartR2 .
+ ?hasPartR2 owl:onProperty obo:RO_0000057 . # RO:has_participant
+ ?hasPartR2 rdf:type owl:Restriction .
+ ?hasPartR2 owl:someValuesFrom ?protSub3 .
+ ?protSub3 rdfs:subClassOf ?interacting_protein .
+
+ ## PARTICIPATING PROTEIN INTERACTION PARTNERS
+ ?interacting_protein rdfs:subClassOf obo:CHEBI_36080 . #CHEBI:protein
+
+ # restriction - participating proteins are human
+ ?interacting_protein rdfs:subClassOf ?taxonRest2 .
+ ?taxonRest2 owl:someValuesFrom obo:NCBITaxon_9606 . # NCBI_TAXON:human
+ ?taxonRest2 owl:onProperty obo:RO_0002162 . # RO:in_taxon
+ ?taxonRest2 rdf:type owl:Restriction .
+ ?intProtICE obo:IAO_0000219 ?interacting_protein . # IAO:denotes
+
+ FILTER (?protSub3 != ?protSub2) . # participating and interacting proteins must be different
+ FILTER regex(str(?intProtICE),'UNIPROT','i') .
+ FILTER regex(str(?partProtICE),'UNIPROT','i') .
+
+ }
