@@ -1,6 +1,6 @@
 # OWL-NETS
 
-OWL-NETS (NEtwork Transformation for Statistical Learning) is a novel computational method that reversibly abstracts OWL-encoded biomedical knowledge into a representation that is well-suited for network inference and hypothesis generation. Further, the lossless transformation of OWL-NETS allows for seamless integration of inferred edges back into the knowledge base, extending its coverage and completeness.
+OWL-NETS (NEtwork Transformation for Statistical learning) is a novel computational method that reversibly abstracts Web Ontology Language (OWL)-encoded biomedical knowledge into a network representation well-suited for network inference. OWL-NETS generates semantically rich network representations that contain heterogeneous nodes and edges, and are more easily consumed by network inference algorithms than their corresponding OWL representations. We argue that OWL-NETS can be used to leverage existing ontology-based knowledge representations and network inference methods to generate novel, significant biological hypotheses.
 
 ## Getting Started
 
