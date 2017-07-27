@@ -33,7 +33,8 @@ We describe the OWL-NETS methodology using an example query that investigates di
 | Description                                                                                   | Data Source            |     
 |:---------------------------------------------------------------------------------------------:|:----------------------:|
 | Human Protein-protein interactions that participate in the biological process of angiogenesis | Gene Ontology; Uniprot  
-
+  
+  
 The image on the left shows the directed OWL network representation of Query 1. The image on the right is the directed absraction network that results when using OWL-NETS. The OWL representation consists of 32,850 nodes and 65,526 edges. The OWL-NETS abstraction network contained 2,2926 nodes and 9,549 edges.
 
 <img src="/owl-nets/images/angiogenesis_owl+nets.png" alt="OWL + OWL-NETS Representation" width="800"/>
