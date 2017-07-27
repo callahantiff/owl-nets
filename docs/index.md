@@ -29,10 +29,11 @@ We describe the OWL-NETS methodology using an example query that investigates di
 **5. Query Endpoint and Construct Network:** Using the node and edge metadata from Step 4, the original SPARQL query is updated and run against an endpoint. The endpoint results and node and edge metadata dictionaries are then used to construct the OWL-NETS abstraction network. The program outputs a json file that contains the directed OWL-NETS abstraction network (.gml) and node and edge metadata.
   
 ## Biomedical Use Case
-The image on the left shows the directed OWL network representation of Query 1. The image on the right is the directed absraction network that results when using OWL-NETS. The OWL representation consists of 32,850 nodes and 65,526 edges. The OWL-NETS abstraction network contained 2,2926 nodes and 9,549 edges.
  
 | Description                                                                                   | Data Source            |     
 |:---------------------------------------------------------------------------------------------:|:----------------------:|
-| Human Protein-protein interactions that participate in the biological process of angiogenesis | Gene Ontology; Uniprot
+| Human Protein-protein interactions that participate in the biological process of angiogenesis | Gene Ontology; Uniprot  
+
+The image on the left shows the directed OWL network representation of Query 1. The image on the right is the directed absraction network that results when using OWL-NETS. The OWL representation consists of 32,850 nodes and 65,526 edges. The OWL-NETS abstraction network contained 2,2926 nodes and 9,549 edges.
 
 <img src="/owl-nets/images/angiogenesis_owl+nets.png" alt="OWL + OWL-NETS Representation" width="800"/>
