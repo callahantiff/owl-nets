@@ -1,24 +1,24 @@
 # OWL-NETS
 
- OWL-NETS (NEtwork Transformation for Statistical Learning) is a novel computational method that reversibly abstracts OWL-encoded biomedical knowledge into a representation well-suited for inference. The OWL-NETS method can be used to leverage existing ontology-based knowledge representations and network inference methods to generate novel, significant biological hypotheses.
+OWL-NETS (NEtwork Transformation for Statistical learning) is a novel computational method that reversibly abstracts Web Ontology Language (OWL)-encoded biomedical knowledge into a network representation well-suited for network inference. OWL-NETS generates semantically rich network representations that contain heterogeneous nodes and edges, and are more easily consumed by network inference algorithms than their corresponding OWL representations. We argue that OWL-NETS can be used to leverage existing ontology-based knowledge representations and network inference methods to generate novel, significant biological hypotheses.
 
 ## Getting Started
 
-To use OWL-NETS, download zipped file or fork and clone project repository. Additional instructions can be found under [*Installation*](#installation). For the program to run successfully the prerequisites must be satisfied. Additional steps must be taken in order to utilize the knowledge sources this method was developed on. Specific instructions for accessing these sources is described in [*Prerequisites*](#prerequisites).
+To use OWL-NETS, download zip file or fork the project repository. Additional instructions can be found under [*Installation*](#installation). For the program to run successfully the prerequisites must be satisfied. Additional steps must be taken in order to utilize the knowledge sources this method was developed on. Specific instructions for accessing these sources is described in [*Prerequisites*](#prerequisites).
 
 ### Prerequisites
 
 This program was written on a system running OS X Sierra. Successful execution of this program requires Python version 2.7. In addition, the following data sources were utilized during the development of the method.
 
   * Python Modules
-    * python 2.7.10 or greater
+    * python 2.7
     * Modules are described under [*Installation*](#Installation)
 
 
 #### Data Sources
-While not a requirement, OWL-NETS was originally designed for use with the Knowledge Base Of Biomedicine (KaBOB). We also have versions of the method that work with RDF (tested using DisGeNet) in development. As the method is data-driven and built on OWL, only minor modifications should be needed in order to adapt it to other systems that use Semantic Web Technologies, especially OWL. If this is something you are interested in please contact us directly for assistance.
+OWL-NETS was originally designed for use with the Knowledge Base Of Biomedicine (KaBOB). Only minor modifications should be needed in order to adapt OWL-NETS to other systems using OWL. If this is something you are interested in please contact us directly for assistance.
 
-If you don't have a data source in mind, but want to get started we recommended the following (note. OWL-NETS has not yet been adapted for use with Bio2RDF or AberOWL, but it is something we intend to explore in future work):
+If you don't have a data source in mind, but want to get started we recommended the following (note. OWL-NETS has not yet been adapted for use with Bio2RDF or AberOWL):
 * KaBOB - described in [Livingston et al., BMC Bioinformatics 16, (2015)](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0559-3). A wiki has been developed that provides detailed instructions to develop a personal copy of KaBOB. Installation requires the following steps:
    1. Download [StarDog](https://www.stardog.com/) - a free 30-day trial can be acquired
    2. Initialize [KaBOB instance](https://github.com/bill-baumgartner/kabob.app/wiki)
@@ -29,7 +29,7 @@ If you don't have a data source in mind, but want to get started we recommended 
 
 ### Installation
 
-To install and execute the program designate the cloned project folder as the current working directory. Please note that any outside files should be placed within the working directory prior to executing the program. This program has prerequisites that must be installed and imported.
+To install and execute the program designate the cloned project folder as the current working directory. Place any outside files within the working directory prior to executing the program.
 
 Program dependencies can be installed using the following:
 
@@ -63,12 +63,12 @@ import urllib2
 ```
 
 #### Authentication
-VERY IMPORTANT: This file must be placed in the same directory as any SPARQL queries you wish to run. Inside the file, on three separate lines provide:
+VERY IMPORTANT: A file containing endpoint authentication information must be placed in the same directory as any SPARQL queries you wish to run. On three separate lines, the file should include:
 * endpoint url
 * username
 * password
 
-This information must be provided to query an endpoint. Provide an empty string for the username and password fields for endpoints not requiring this information. See example below as well [authentication](https://github.com/callahantiff/owl-nets/blob/master/authentication).
+Provide an empty string for the username and password fields for endpoints with no username/passowrd. See example below as well [authentication](https://github.com/callahantiff/owl-nets/blob/master/authentication).
 ```
 # username/password required
 "http://rdf.disgenet.org/sparql/"
@@ -76,9 +76,8 @@ This information must be provided to query an endpoint. Provide an empty string 
 'password'
 ```
 
-
 ## Running OWL-NETS
-OWL-NETS can be run from the command line via argparse arguments, but also has a user-friendly GUI. See specific instructions for using both methods below.
+OWL-NETS can be run from the command line via argparse arguments, but also has a user-friendly GUI.
 
 Running program from the command line
 ```
@@ -112,7 +111,7 @@ Running program using the GUI
 tiffanycallahan$ python OWL_NETS.py
 ```
 
-After running the above code the following window will appear. This window will guide you through the program. A second window will appear when the program is finished instructing you where the output files can be found.
+This window will guide you through the program. A second window will appear when the program is finished instructing you where the output files can be found.
 
 <img src="https://github.com/callahantiff/owl-nets/blob/master/images/OWL-NETS_GUI.png" width="400">
 
