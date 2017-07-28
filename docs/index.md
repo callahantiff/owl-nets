@@ -32,7 +32,7 @@ We describe the OWL-NETS methodology using an example query that investigates di
  
 | Description                                                                                   | Data Source            |     
 |:---------------------------------------------------------------------------------------------:|:----------------------:|
-| Human Protein-protein interactions that participate in the biological process of angiogenesis | Gene Ontology; Uniprot  
+| Human Protein-protein interactions that participate in the biological process of angiogenesis | Gene Ontology; Gene Ontology Annotations  
   
 
 
