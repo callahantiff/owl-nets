@@ -33,6 +33,7 @@
 *.gz
 *.tar
 *.zip
+!Example_Data/*.zip
 
 # Logs #
 ########
