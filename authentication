@@ -1,1 +1,2 @@
+# connects to DisGeNet - example of an endpoint that has no username or password
 http://rdf.disgenet.org/sparql/
