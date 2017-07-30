@@ -72,7 +72,7 @@ def QueryTriples(query_body):
 
         return TripleType(query_triple)
 
-    # format 2 - alternative triple format, see example
+    # format 2 - alternative triple format:
     ## ?gda sio:SIO_000628 ?gene,?disease;
     ## sio:SIO_000216 ?scoreIRI.
     else:
