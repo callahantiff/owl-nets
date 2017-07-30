@@ -124,6 +124,9 @@ Please read [CONTRIBUTING.md](https://github.com/callahantiff/owl-nets/blob/mast
 
 We use [SemVer](http://semver.org/) for versioning.
 
+## Testing
+We are in the process of developing tests for each module. We will create documentation as they are created.
+
 ## Authors
 
 * Tiffany J. Callahan
