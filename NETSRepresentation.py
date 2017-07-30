@@ -528,20 +528,11 @@ def NETSNetworkBuilder(input1):
     print str('Started building OWL-NETS Abstraction Network: ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     print '\n'
 
-    # input1 = 'SPARQL_Queries/Trametinib_query'
-    # input1 = 'SPARQL_Queries/Angiogenesis_query'
-    # input1 = 'SPARQL_Queries/DDI_reactome_query'
-    # input1 = 'SPARQL_Queries/DisGeNet_Query'
-
     # parse query and return triples
     query_text = QueryParser.QueryParser(input1)
 
     # create a graph representation of query
     graph = GraphMaker(query_text[0])
-
-    # visualize graph
-    # A = nx.nx_agraph.to_agraph(graph)
-    # A.draw('example.png', prog='dot', edge_data='predicate')
 
     ## NETS NODES
     # will return a list of NETS nodes
@@ -557,8 +548,6 @@ def NETSNetworkBuilder(input1):
 
     # get direction of NETS edges
     NETS_edge_order = EdgeDirection(graph, sub_graph, NETS_edges)
-    # remove once KaBOB is updated
-    # NETS_edge_order = [('?trem', '?drug'), ('?drug', '?trem'), ('?drug', '?targetBioEntity')]
 
     # get edge metadata
     NETS_edge_metadata = EdgeMetadata(graph, sub_graph, NETS_edge_order)
@@ -589,7 +578,6 @@ def NETSNetworkBuilder(input1):
         results = QueryRunner.RunQuery(updated_query_text[0], authentication)
 
         # export results to json file
-        # input2 = 'Query_Data/Trametinib_query.json'
         with open(str(input1.rpartition(".")[-1] + "_results.json"), 'w') as outfile:
             json.dump(results, outfile)
 
@@ -604,7 +592,6 @@ def NETSNetworkBuilder(input1):
     NETS_graph = NETSGraph(results, NETS_edge_order, DictCleaner(node_info[0], 'id', 'label'), node_info[1], edge_data)
 
     # write graphs to gml and JSON files
-    # input3 = 'Network_Data/Angiogenesis_query_NETS'
     nx.write_gml(NETS_graph, str(input1.rpartition(".")[-1] + "_NETS") + '_network.gml')
     GraphJson(NETS_graph, NETS_edge_metadata[1], str(input1.rpartition(".")[-1] + "_NETS") + '_network.json')
 
