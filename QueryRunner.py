@@ -7,7 +7,6 @@
 
 
 ## import module/script dependencies
-# modules
 import os
 import requests
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -22,7 +21,7 @@ def Authenticate(input_file):
     and if it only contains a URL (situations where a username and password are not required) it returns empty strings
     for those fields.
     :param input_file: a string containing a file path to a file containing authentication information
-    :return: a list where list[0] is endpoint url, list[1] is usernames, and list[2] is password
+    :return: a list where list[0] is endpoint url, list[1] username, and list[2] password
     '''
     # CHECK - file has data
     if os.stat(input_file).st_size == 0:
@@ -51,7 +50,7 @@ def RunQuery(query_body, input_file):
     # get authentication information
     authentication = Authenticate(input_file)
 
-    # CHECK: verify provided enpoint credentials
+    # CHECK: verify provided endpoint credentials
     request = requests.get(authentication[0], auth=(authentication[1], authentication[2]))
 
     if request.status_code != 200:
@@ -64,7 +63,6 @@ def RunQuery(query_body, input_file):
         urllib2.install_opener(opener)
 
         # connect to knowledge source
-        # url to endpoint - 'http://amc-tantor.ucdenver.pvt:10035/repositories/kabob-dev'
         endpoint = SPARQLWrapper(authentication[0])
         endpoint.setCredentials(user = authentication[1], passwd = authentication[2])
         endpoint.setReturnFormat(JSON)  # query output format
