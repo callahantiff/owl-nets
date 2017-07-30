@@ -21,7 +21,7 @@ class ProgramGUI:
         self.master = master
         master.title("OWL-NETS") # window title
 
-        self.label = Label(master, text='\n' + 'OWL-NETS: NEtwork Entity Transformation for Statistical Learning' + '\n') #
+        self.label = Label(master, text='\n' + 'OWL-NETS: NEtwork Entity Transformation for Statistical learning' + '\n')
         self.label.grid(row = 0, columnspan = 3, sticky=N+W)
 
         # buttons
@@ -60,7 +60,9 @@ class ProgramGUI:
     def ButtonGoCall(self):
         '''Function stores the functionality for the 'GO' button '''
         val_check = self.Validate()  # check to make sure that input was provided
-        if val_check != 0: # if func is correct return 0
+
+        # if func is correct return 0
+        if val_check != 0:
             return
 
         input_file = self.entry.get()
@@ -146,10 +148,10 @@ def CommandLine(args):
 
 if __name__ == "__main__":
 
-    parser = InputParser()          # start the command-line argument parsing
-    args = parser.parse_args()      # read the command-line arguments
+    parser = InputParser()
+    args = parser.parse_args()
 
-    if args.input:                  # If there is an argument, run the command-line version
+    if args.input:
         CommandLine(args)
     else:
         root = Tk()
