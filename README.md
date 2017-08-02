@@ -6,6 +6,8 @@ OWL-NETS (NEtwork Transformation for Statistical learning) is a novel computatio
 
 To use OWL-NETS, download zip file or fork the project repository. Additional instructions can be found under [*Installation*](#installation). For the program to run successfully the prerequisites must be satisfied. Additional steps must be taken in order to utilize the knowledge sources this method was developed on. Specific instructions for accessing these sources is described in [*Prerequisites*](#prerequisites).
 
+We have provided a directory called "Example_Data" that includes an example query, query results, and the resulting OWL-NETS abstraction and OWL representation networks. See [*Example Data*](#example-data) below for specific instructions on how to use these resources.
+
 ### Prerequisites
 
 This program was written on a system running OS X Sierra. Successful execution of this program requires Python version 2.7. In addition, the following data sources were utilized during the development of the method.
@@ -115,6 +117,16 @@ This window will guide you through the program. A second window will appear when
 
 <img src="https://github.com/callahantiff/owl-nets/blob/master/images/OWL-NETS_GUI.png" width="400">
 
+
+## Example Data
+This directory contains data that were produced from running OWL-NETS. The following files are included:
+  * Angiogenesis_query: this is an example SPARQL query. This query is searching for human protein-protein interactions that participate in Angiogenesis-related GO biological processes.
+  * Angiogenesis_query_results.json.zip: the results from the augmented SPARQL query against KaBOB.
+  * Angiogenesis_query_NETS_network.gml: the directed OWL-NETS abstraction network.
+  * Angiogenesis_query_NETS_network.json: the metadata for the directed OWL-NETS abstraction network.
+  * Angiogenesis_query_OWL_network.gml: the directed OWL representation network.
+
+To use these files unzip Angiogenesis_query_results.json.zip within the 'Example_Data' directory and run the code as described in [*Running OWL-NETS*](#running-owl-nets). Placing the SPARQL query and Angiogenesis_query_results.json in the same directory will allow users to explore the functionality of the code without requiring access to KaBOB.
 
 ## Contributing
 
