@@ -9,7 +9,7 @@ We propose OWL-NETS (NEtwork Transformation for Statistical learning), a novel c
 ### Assumptions
 OWL-NETS is implemented in Python (v2.7) and can be run from a simple GUI or from the command line. While primarily developed for use with OWL, the program can be easily extended for use with other Semantic Web technologies by modifying two primary assumptions:
   * A knowledge source contains identifiers that directly represent biologically meaningful concepts (e.g., GO:0001525 is the identifier for the biological process of angiogenesis). Within OWL-NETS, biologically meaningful concepts are called "NETS nodes".
-  * A knowledge source uses restrictions to specify the existence of biologically important relations between pairs of biological concepts (e.g., Proteins restricted to participate in angiogenesis). In OWL, restrictions provide a way to make the definition of a class more specific (e.g., proteins, specifically, protein kinases, participate in phosphorylation).
+  * A knowledge source uses restrictions to specify the existence of biologically important relations between pairs of biological concepts (e.g., proteins restricted to participate in angiogenesis). In OWL, restrictions provide a way to make the definition of a class more specific (e.g., proteins, specifically, protein kinases, participate in phosphorylation).
 Within OWL-NETS "NETS-edges" represent biologically important relations.
 
 ### Overview
