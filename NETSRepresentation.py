@@ -126,9 +126,9 @@ def NETSEdgeFinder(NETS_nodes, graph):
 
 def Direction(sub_graph, restrictions, edges):
     '''
-    Function takes a directed graph, a list of restrictions, and an edge. With this information the function identifies
-    which node in restriction list is closest to the restriction. This information is needed for determining edge
-    directionality.
+    Function takes an undirected graph, a list of restrictions, and an edge. With this information the function
+    identifies which node in restriction list is closest to the restriction. This information is needed for
+    determining edge directionality.
     :param sub_graph: sub-graph of nodes with out degree > 0 (except for NETS nodes)
     :param restrictions: list of nodes
     :param edges: list of edges
@@ -152,12 +152,12 @@ def Direction(sub_graph, restrictions, edges):
 def EdgeDirection(graph, sub_graph, NETS_edges):
     '''
     Function takes the directed full and sub-graphs as well as a list of NETS edges and returns a list of lists where
-    each list is an and edge and the order of the nodes in each edge indicates the direction of the relationship between
+    each list is an edge and the order of the nodes in each edge indicates the direction of the relationship between
     the nodes. The direction is determined by first finding the shortest path between the two NETS edges using the
     undirected sub-graph. Each node laying on the shortest path is evaluated and those nodes with an out edge of type
     'rdf_type' that points to an object of 'owl:Restriction' are selected. The NETS node in the path (pointed to by) the
     selected node is the object making the other node (the node that cannot be connected to the selected node by a
-    directed path) is the subject.
+    directed path) the subject.
     :param graph: a directed graphical representation where nodes are subjects/objects of the triple and edges are the
     labeled predicates
     :param sub_graph: sub-graph of nodes with out degree > 0 (except for NETS nodes)
