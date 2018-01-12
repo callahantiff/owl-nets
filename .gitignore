@@ -17,14 +17,14 @@
 # Scripts #
 ###########
 *DisGeNetQuery.py
-*EvaluationMetrics.py
-*LinkPrediction.py
-*LinkPredictionResults.py
+#*EvaluationMetrics.py
+#*LinkPrediction.py
+#*LinkPredictionResults.py
 *NETSRDFRepresentationResults.py
 *NETSRDFRepresentation.py
-*NetworkInference.py
-*NetworkInferencePlots.py
-*NetworkStatistics.py
+#*NetworkInference.py
+#*NetworkInferencePlots.py
+#*NetworkStatistics.py
 *authenticate
 
 # Packages #
