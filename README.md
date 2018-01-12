@@ -155,8 +155,4 @@ This project is licensed under 3-Clause BSD License - see the [LICENSE.md](https
 
 ## Acknowledgments
 
-* We thank Ignacio Tripodi, Adrianne Stefanski, Marc Daya, Drs. Kevin Bretonnel Cohen, Elizabeth White, Anis Karimpour-Fard, Carsten Görg, and Daniel McShan, as well as Laura Stevens for their feedback.
-
-* Work supported by the National Library of Medicine Training Grant T15 LM009451, as well as R01 LM009254 and R01LM008111 to LH. The content is solely the responsibility of the authors and does not necessarily represent the views of the National Institutes of Health or the National Library of Medicine.
-
 * README was generated from a modified markdown template originally created by **Billie Thompson [PurpleBooth](https://github.com/PurpleBooth)**.
