@@ -4,6 +4,8 @@ OWL-NETS (NEtwork Transformation for Statistical learning) is a novel computatio
 
 *Callahan TJ, Baumgartner Jr WA, Bada M, Stefanski AL, Tripodi I, White EK, Hunter LE. OWL-NETS: Transforming OWL Representations for Improved Network Inference. In Pacific Symposium on Biocomputing. Pacific Symposium on Biocomputing 2018 (Vol. 23, p. 133). NIH Public Access. [PMC5737627](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737627/)*
 
+[![DOI](https://zenodo.org/badge/98161637.svg)](https://zenodo.org/badge/latestdoi/98161637)
+
 ## Getting Started
 
 To use OWL-NETS, download zip file or fork the project repository. Additional instructions can be found under [*Installation*](#installation). For the program to run successfully the prerequisites must be satisfied. Additional steps must be taken in order to utilize the knowledge sources this method was developed on. Specific instructions for accessing these sources is described in [*Prerequisites*](#prerequisites).
