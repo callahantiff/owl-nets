@@ -6,6 +6,11 @@ OWL-NETS (NEtwork Transformation for Statistical learning) is a novel computatio
 
 [![DOI](https://zenodo.org/badge/98161637.svg)](https://zenodo.org/badge/latestdoi/98161637)
 
+### Updates (02/27/20)  
+An alternative and more generalizable version of OWL-NETS has been created. The verison of this code was created as part of the [PheKnowLator](https://github.com/callahantiff/PheKnowLator/wiki) project. For details, please see the [OWL-NETS 2.0 Wiki page](https://github.com/callahantiff/PheKnowLator/wiki/OWL-NETS-2.0). The code can be found [here](https://github.com/callahantiff/PheKnowLator/blob/master/scripts/python/removes_owl_semantics.py).
+
+<br> 
+
 ## Getting Started
 
 To use OWL-NETS, download zip file or fork the project repository. Additional instructions can be found under [*Installation*](#installation). For the program to run successfully the prerequisites must be satisfied. Additional steps must be taken in order to utilize the knowledge sources this method was developed on. Specific instructions for accessing these sources is described in [*Prerequisites*](#prerequisites).
