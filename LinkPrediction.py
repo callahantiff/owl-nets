@@ -203,7 +203,7 @@ def ResourceAllocation(graph, edges):
     return scores
 
 
-def AdamicAdvar(graph, edges):
+def AdamicAdar(graph, edges):
     ''' Function takes a networkx graph object and list of edges calculates the Adamic Advar for these edges given the
     structure of the graph.
     :param graph: networkx graph object
