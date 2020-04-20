@@ -230,8 +230,8 @@ def AdamicAdvar(graph, edges):
             n_intersection = set(graph[i].keys()).intersection(set(graph[j].keys()))
 
             for c in n_intersection:
-                w.append(graph.degree(c))
-            scores[edge] = 1.0/np.log(np.sum(w))
+                w.append(1.0/np.log(g.degree(c)))
+            scores[edge] = np.sum(w)
 
     return scores
 
