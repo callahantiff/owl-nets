@@ -260,8 +260,8 @@ def AAFracAUC(network, nonexist_edges, iterations, steps):
         iteration_data = GraphMaker(network, steps)
         training_graph = iteration_data[0]
         testing_edges = iteration_data[1]
-        missing_scores = LinkPrediction.AdamicAdvar(training_graph, testing_edges)
-        nonexist_scores = LinkPrediction.AdamicAdvar(training_graph, nonexist_edges)
+        missing_scores = LinkPrediction.AdamicAdar(training_graph, testing_edges)
+        nonexist_scores = LinkPrediction.AdamicAdar(training_graph, nonexist_edges)
         #get AUC
         auc_round = EvaluationMetrics.AUC(nonexist_scores, missing_scores)
         auc.append(auc_round)
