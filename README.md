@@ -6,8 +6,13 @@ OWL-NETS (NEtwork Transformation for Statistical learning) is a novel computatio
 
 [![DOI](https://zenodo.org/badge/98161637.svg)](https://zenodo.org/badge/latestdoi/98161637)
 
-### Updates (02/27/20)  
-An alternative and more generalizable version of OWL-NETS has been created. The verison of this code was created as part of the [PheKnowLator](https://github.com/callahantiff/PheKnowLator/wiki) project. For details, please see the [OWL-NETS 2.0 Wiki page](https://github.com/callahantiff/PheKnowLator/wiki/OWL-NETS-2.0). The code can be found [here](https://github.com/callahantiff/PheKnowLator/blob/master/scripts/python/removes_owl_semantics.py).
+### Updates (10/01/20)  
+An improved versions of `OWL-NETS` has been created. The updated verison was created as part of the [PheKnowLator](https://github.com/callahantiff/PheKnowLator/wiki) project. For details, please see the [OWL-NETS 2.0 Wiki page](https://github.com/callahantiff/PheKnowLator/wiki/OWL-NETS-2.0). The code can be found [here](https://github.com/callahantiff/PheKnowLator/blob/master/scripts/python/owlnets.py).  
+
+Changes made to the `v1.0` implementation include:  
+- Extending the method to work with subclass and instance-based knowledge graphs  
+- Adding a list of OWL properties that should be kept in the transformed graph  
+- Adding code to explicitly decode restrictions as well as  `owl:intersectionOf` and `owl:unionOf` constructors  
 
 <br> 
 
